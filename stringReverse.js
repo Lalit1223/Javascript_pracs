@@ -7,7 +7,15 @@ function reverseString(str){
     return reversedStr
 }
 
+function main(){
 const userInput = prompt("Enter a string to reverse");
-
+if(userInput==null){
+    return
+}
+else{
 const reversedInput = reverseString(userInput);
 console.log("reversed string:",reversedInput);
+}
+}
+
+main();
