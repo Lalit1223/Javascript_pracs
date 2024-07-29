@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.emoji {
+    text-align: center;
+}
+
+.emoji span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#emojiGenerateBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
