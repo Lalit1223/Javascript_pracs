@@ -81,16 +81,23 @@
 // const countryList = ["Australia", "Germany", "USA"];
 // console.log(longestCountryName(countryList)); // Output: "United States of America"
 
-function largCountryName(countries) {
-  if (countries.length === 0) {
-    return null;
-  }
+// Q4 Write a JavaScript function to count the number of vowels in a String argument.
 
-  let largCountry = countries[0];
+function countVowels(str) {
+  // Define the vowels
+  const vowels = "aeiouAEIOU";
+  let count = 0;
 
-  for (let i = 1; i < countries.length; i++) {
-    if (countries[i] > largCountry) {
-      largCountry = countries[i];
+  // Loop through the string and check if each character is a vowel
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
     }
   }
+
+  return count;
 }
+
+// Example usage
+const inputString = "Hello World";
+console.log(countVowels(inputString)); // Output: 3
