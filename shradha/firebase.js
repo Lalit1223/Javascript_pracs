@@ -1,26 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 
-// Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDjYpuzU0OaJaSbPPdLTxjbNp7jX_MKTLc",
-  authDomain: "my-app-64da7.firebaseapp.com",
-  projectId: "my-app-64da7",
-  storageBucket: "my-app-64da7.appspot.com",
-  messagingSenderId: "66375860325",
-  appId: "1:66375860325:web:8987228c3dae2fe94d068c",
-  measurementId: "G-PKZRXP2M9J",
-};
+// Use the global variable
+const firebaseConfig = window.firebaseConfig;
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+export { auth };
 
 // Signup Function
 function Signup() {
