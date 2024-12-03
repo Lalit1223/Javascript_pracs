@@ -14,13 +14,25 @@ btn.addEventListener("click", function () {
 
   item.appendChild(del);
   ul.appendChild(item);
+  inp.value = "";
 });
 
 delBtns = document.querySelectorAll(".Delete");
 
-for (delBtn of delBtns) {
-  delBtn.addEventListener("click", function () {
-    let par = this.parentElement;
-    par.remove();
-  });
-}
+//this code will not delete the todo which will be created after the adding tasks for that we have to use event deligation model (event bubbling)
+
+// for (delBtn of delBtns) {
+//   delBtn.addEventListener("click", function () {
+//     let par = this.parentElement;
+//     par.remove();
+//   });
+// }
+
+//in this case we can perform delete on Ul as we are not creating new ul on adding todo. so we used concept of event bubbling.
+
+ul.addEventListener("click", function (e) {
+  if (e.target.nodeName == "BUTTON") {
+    let listItem = e.target.parentElement;
+    listItem.remove();
+  }
+});
