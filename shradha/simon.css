@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    border-radius: 15%;
+    border: 8px solid black;
+    margin: 2rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.red{
+    background-color: #f99b45;
+}
+
+.yellow{
+    background-color: #d95980;
+}
+
+.white{
+    background-color: #63aac0;
+}
+
+.black{
+    background-color: #819ff9;
+}
