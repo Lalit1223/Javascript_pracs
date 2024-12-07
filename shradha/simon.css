@@ -30,3 +30,11 @@ body{
 .black{
     background-color: #819ff9;
 }
+
+.flash{
+    background-color: white;
+}
+
+.user{
+    background-color: darkred;
+}
