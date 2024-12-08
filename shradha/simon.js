@@ -1,10 +1,12 @@
 let userSeq = [];
 let gameSqe = [];
+let scores = [];
 
 let started = false;
 let level = 0;
 
 h4 = document.querySelector("h4");
+h3 = document.querySelector("h3");
 let btns = ["red", "yellow", "black", "white"];
 
 document.addEventListener("keypress", function () {
@@ -55,11 +57,16 @@ function checkAns(index) {
       setTimeout(levelUp, 1000);
     }
   } else {
-    h4.innerHTML = `OOOPS!!! failed, your score was <b>${level}<b> <br> press any key to restart`;
+    scores.push(level);
+    let score = Math.max(...scores);
+    h3.innerText = `High score is ${score}`;
+
+    h4.innerHTML = `OOOPS!!! failed, your score was <b>${level}<b> <br> press any key to restart `;
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(function () {
       document.querySelector("body").style.backgroundColor = "white";
     }, 150);
+
     reset();
   }
 }
