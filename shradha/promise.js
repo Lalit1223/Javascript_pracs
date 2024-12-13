@@ -101,3 +101,18 @@ const fastPromise = new Promise((resolve) =>
 );
 
 Promise.race([slowPromise, fastPromise]).then(console.log).catch(console.error);
+
+function intenetSpeed() {
+  return new Promise((resolve, reject) => {
+    var speed = Math.floor(Math.random() * 10) + 1;
+    console.log(`The internet Speed IS ${speed}`);
+
+    if (speed > 4) {
+      resolve("good internet connection!!");
+    } else {
+      reject("Weak connection");
+    }
+  });
+}
+
+intenetSpeed().then(console.log).catch(console.error);
